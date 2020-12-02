@@ -2,3 +2,6 @@
 bin/
 obj/
 KsiazkaAdresowa_Od_Artura_Obiektowo.*
+main.exe
+main.o
+Uzytkownicy.txt
