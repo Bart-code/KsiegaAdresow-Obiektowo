@@ -10,7 +10,6 @@
 #include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
 
-
 using namespace std;
 
 class UzytkownikMeneger
@@ -25,6 +24,7 @@ class UzytkownikMeneger
 public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    void wczytajUzytkownikowZPliku();
 };
 
 #endif
