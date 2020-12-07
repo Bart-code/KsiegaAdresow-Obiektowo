@@ -1,10 +1,15 @@
 #include "PlikZUzytkownikami.h"
+#include <stdlib.h>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature/setup-filename-at-begining
 void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
 
     string liniaZDanymiUzytkownika = "";
-    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::out|ios::app);
 
     if (plikTekstowy.good() == true)
     {
@@ -42,4 +47,58 @@ string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowym
     liniaZDanymiUzytkownika += uzytkownik.pobierzHaslo() + '|';
 
     return liniaZDanymiUzytkownika;
+}
+
+Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami)
+{
+    Uzytkownik uzytkownik;
+    string pojedynczaDanaUzytkownika = "";
+    int numerPojedynczejDanejUzytkownika = 1;
+
+    for (int pozycjaZnaku = 0; pozycjaZnaku < daneJednegoUzytkownikaOddzielonePionowymiKreskami.length(); pozycjaZnaku++)
+    {
+        if (daneJednegoUzytkownikaOddzielonePionowymiKreskami[pozycjaZnaku] != '|')
+        {
+            pojedynczaDanaUzytkownika += daneJednegoUzytkownikaOddzielonePionowymiKreskami[pozycjaZnaku];
+        }
+        else
+        {
+            switch(numerPojedynczejDanejUzytkownika)
+            {
+            case 1:
+                uzytkownik.ustawId(atoi(pojedynczaDanaUzytkownika.c_str()));
+                break;
+            case 2:
+                uzytkownik.ustawLogin(pojedynczaDanaUzytkownika);
+                break;
+            case 3:
+                uzytkownik.ustawHaslo(pojedynczaDanaUzytkownika);
+                break;
+            }
+            pojedynczaDanaUzytkownika = "";
+            numerPojedynczejDanejUzytkownika++;
+        }
+    }
+    return uzytkownik;
+}
+
+vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
+{
+    vector <Uzytkownik> wektorUzytkownikow;
+    Uzytkownik uzytkownik;
+    string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
+
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::in);
+
+    if (plikTekstowy.good() == true)
+    {
+        while (getline(plikTekstowy, daneJednegoUzytkownikaOddzielonePionowymiKreskami))
+        {
+            uzytkownik = pobierzDaneUzytkownika(daneJednegoUzytkownikaOddzielonePionowymiKreskami);
+            wektorUzytkownikow.push_back(uzytkownik);
+        }
+
+    }
+    plikTekstowy.close();
+    return wektorUzytkownikow;
 }

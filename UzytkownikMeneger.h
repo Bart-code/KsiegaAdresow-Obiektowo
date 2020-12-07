@@ -10,7 +10,6 @@
 #include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
 
-
 using namespace std;
 
 class UzytkownikMeneger
@@ -24,9 +23,16 @@ class UzytkownikMeneger
 
 public:
     UzytkownikMeneger(string nazwaPlikuZUzytkownikami)
+<<<<<<< HEAD
     : plikZUzytkownikami(nazwaPlikuZUzytkownikami){}
+=======
+    : plikZUzytkownikami(nazwaPlikuZUzytkownikami)
+    {
+    };
+>>>>>>> feature/setup-filename-at-begining
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    void wczytajUzytkownikowZPliku();
 };
 
 #endif
