@@ -1,5 +1,5 @@
-#ifndef METODYPOMOCNICZE_H
-#define METODYPOMOCNICZE_H
+#ifndef UZYTKOWNIKMENEGER_H
+#define UZYTKOWNIKMENEGER_H
 
 #include <iostream>
 #include <vector>
@@ -9,12 +9,13 @@
 
 #include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
+#include "MetodyPomocnicze.h"
 
 using namespace std;
 
 class UzytkownikMeneger
 {
-    int idZalogowanegoUzytkownik;
+    int idZalogowanegoUzytkownika;
     vector <Uzytkownik> uzytkownicy;
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
@@ -29,6 +30,7 @@ public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
+    void logowanieUzytkownika();
 };
 
 #endif
