@@ -71,3 +71,8 @@ bool KsiazkaAdresowa::czyZalogowano()
     if(uzytkownikMeneger.pobierzIdZalogowanegoUzytkownika()==0) return false;
     else return true;
 }
+
+void KsiazkaAdresowa::dodajAdresata()
+{
+    adresatMeneger.dodajAdresata();
+}

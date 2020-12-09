@@ -27,7 +27,7 @@ public:
     string pobierzNumerTelefonu();
     string pobierzEmail();
     string pobierzAdres();
-}
+};
 
 
 #endif

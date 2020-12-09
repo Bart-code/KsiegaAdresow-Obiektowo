@@ -4,12 +4,14 @@
 #include <iostream>
 
 #include "UzytkownikMeneger.h"
+#include "AdresatMeneger.h"
 
 using namespace std;
 
 class KsiazkaAdresowa
 {
     UzytkownikMeneger uzytkownikMeneger;
+    AdresatMeneger adresatMeneger;
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami)
@@ -25,6 +27,7 @@ public:
     char wybierzOpcjeZMenuGlownego();
     char wybierzOpcjeZMenuUzytkownika();
     bool czyZalogowano();
+    void dodajAdresata();
 };
 
 #endif
