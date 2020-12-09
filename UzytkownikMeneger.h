@@ -26,11 +26,16 @@ public:
     UzytkownikMeneger(string nazwaPlikuZUzytkownikami)
     : plikZUzytkownikami(nazwaPlikuZUzytkownikami)
     {
+        idZalogowanegoUzytkownika=0;
     };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
     void logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    void wylogujUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+
 };
 
 #endif

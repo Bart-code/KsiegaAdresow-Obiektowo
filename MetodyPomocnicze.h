@@ -13,6 +13,7 @@ class MetodyPomocnicze
 public:
     static string konwersjaIntNaString(int);
     static string wczytajLinie();
+    static char wczytajZnak();
 };
 
 #endif // METODYPOMOCNICZE_H
