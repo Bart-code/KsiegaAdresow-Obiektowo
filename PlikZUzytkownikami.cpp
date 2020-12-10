@@ -1,10 +1,7 @@
 #include "PlikZUzytkownikami.h"
 #include <stdlib.h>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> feature/setup-filename-at-begining
 void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
 

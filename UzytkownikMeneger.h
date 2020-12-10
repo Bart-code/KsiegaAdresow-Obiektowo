@@ -24,14 +24,12 @@ class UzytkownikMeneger
 
 public:
     UzytkownikMeneger(string nazwaPlikuZUzytkownikami)
-<<<<<<< HEAD
-    : plikZUzytkownikami(nazwaPlikuZUzytkownikami){}
-=======
+
     : plikZUzytkownikami(nazwaPlikuZUzytkownikami)
     {
         idZalogowanegoUzytkownika=0;
     };
->>>>>>> feature/setup-filename-at-begining
+
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();

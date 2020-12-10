@@ -21,12 +21,10 @@ class PlikZUzytkownikami
 
 
 public:
-<<<<<<< HEAD
-    PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {};
-=======
+
     PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI)
     : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {};
->>>>>>> feature/setup-filename-at-begining
+
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     vector <Uzytkownik> wczytajUzytkownikowZPliku(void);
     void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
