@@ -14,6 +14,7 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMeneger.logowanieUzytkownika();
+    adresatMeneger.ustawIdZalogowanegoUzytkownika(uzytkownikMeneger.pobierzIdZalogowanegoUzytkownika());
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
@@ -30,7 +31,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 {
     char wybor;
 
-    //system("cls");
+    system("cls");
     cout << "    >>> MENU  GLOWNE <<<" << endl;
     cout << "---------------------------" << endl;
     cout << "1. Rejestracja" << endl;
@@ -47,7 +48,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
 {
     char wybor;
 
-    //system("cls");
+    system("cls");
     cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
     cout << "---------------------------" << endl;
     cout << "1. Dodaj adresata" << endl;
@@ -75,4 +76,9 @@ bool KsiazkaAdresowa::czyZalogowano()
 void KsiazkaAdresowa::dodajAdresata()
 {
     adresatMeneger.dodajAdresata();
+}
+
+void KsiazkaAdresowa::wypiszWszystkichAdresatowZalogowanegoUzytkownika()
+{
+    adresatMeneger.wyswietlWszystkichAdresatow();
 }

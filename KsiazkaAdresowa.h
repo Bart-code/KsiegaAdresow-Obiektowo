@@ -14,8 +14,9 @@ class KsiazkaAdresowa
     AdresatMeneger adresatMeneger;
 
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami)
-    : uzytkownikMeneger(nazwaPlikuZUzytkownikami)
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
+    : uzytkownikMeneger(nazwaPlikuZUzytkownikami),
+    adresatMeneger(nazwaPlikuZAdresatami)
     {
         uzytkownikMeneger.wczytajUzytkownikowZPliku();
     };
@@ -28,6 +29,7 @@ public:
     char wybierzOpcjeZMenuUzytkownika();
     bool czyZalogowano();
     void dodajAdresata();
+    void wypiszWszystkichAdresatowZalogowanegoUzytkownika();
 };
 
 #endif
