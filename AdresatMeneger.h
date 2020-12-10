@@ -33,6 +33,8 @@ public:
     void dodajAdresata();
     void ustawIdZalogowanegoUzytkownika(int);
     void wyswietlWszystkichAdresatow();
+    void wczytajAdresatowZPliku(void);
+    int pobierzIdOstatniegoAdresata(void);
 };
 
 #endif

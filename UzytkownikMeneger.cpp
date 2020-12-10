@@ -43,8 +43,13 @@ bool UzytkownikMeneger::czyIstniejeLogin(string login)
 {
     for(int i=0; i<uzytkownicy.size(); i++)
     {
-        if (uzytkownicy[i].pobierzLogin()==login) return true;
-        cout << endl << "Istnieje uzytkownik o takim loginie." << endl;
+        if (uzytkownicy[i].pobierzLogin()==login)
+        {
+            cout << endl << "Istnieje uzytkownik o takim loginie." << endl;
+            system("pause");
+            return true;
+        }
+
     }
     return false;
 }

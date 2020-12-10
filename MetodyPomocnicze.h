@@ -14,6 +14,7 @@ public:
     static string konwersjaIntNaString(int);
     static string wczytajLinie();
     static char wczytajZnak();
+    static int konwersjaStringNaInt(string);
 };
 
 #endif // METODYPOMOCNICZE_H

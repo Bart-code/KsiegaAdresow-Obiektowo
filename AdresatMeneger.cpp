@@ -1,7 +1,5 @@
 #include "AdresatMeneger.h"
 
-
-
 using namespace std;
 
 
@@ -77,4 +75,18 @@ void AdresatMeneger::wyswietlDaneAdresata(Adresat adresat)
     cout << "Numer telefonu:     " << adresat.pobierzNumerTelefonu() << endl;
     cout << "Email:              " << adresat.pobierzEmail()<< endl;
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
+}
+
+void AdresatMeneger::wczytajAdresatowZPliku(void)
+{
+    adresaci=plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    idOstatniegoAdresata=pobierzIdOstatniegoAdresata()+1;
+
+}
+
+int AdresatMeneger::pobierzIdOstatniegoAdresata(void)
+{
+    vector <Adresat> :: iterator itr = adresaci.end();
+
+    return (itr -> pobierzId());
 }

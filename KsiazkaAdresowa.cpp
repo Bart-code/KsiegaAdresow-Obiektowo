@@ -15,6 +15,8 @@ void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMeneger.logowanieUzytkownika();
     adresatMeneger.ustawIdZalogowanegoUzytkownika(uzytkownikMeneger.pobierzIdZalogowanegoUzytkownika());
+    system("pause");
+    adresatMeneger.wczytajAdresatowZPliku();
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
