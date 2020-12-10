@@ -11,7 +11,10 @@ class MetodyPomocnicze
 {
 
 public:
-    static string konwerjsaIntNaString(int);
+    static string konwersjaIntNaString(int);
+    static string wczytajLinie();
+    static char wczytajZnak();
+    static int konwersjaStringNaInt(string);
 };
 
 #endif // METODYPOMOCNICZE_H
