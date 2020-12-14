@@ -17,7 +17,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
         }
         else
         {
-            plikTekstowy  << endl << liniaZDanymiAdresata ;
+            plikTekstowy <<  liniaZDanymiAdresata << endl;
         }
     }
     else
@@ -25,6 +25,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
         cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
     }
     plikTekstowy.close();
+    idOstatniegoAdresata++;
     system("pause");
 }
 
@@ -58,7 +59,7 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
     Adresat adresat;
     vector <Adresat> adresaci;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
-    string daneOstaniegoAdresataWPliku = "";
+    string daneOstatniegoAdresataWPliku = "";
     fstream plikTekstowyAdresaci;
     plikTekstowyAdresaci.open(nazwaPlikuZAdresatami.c_str(), ios::in);
 
@@ -71,14 +72,24 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
                 adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
                 adresaci.push_back(adresat);
             }
+            daneOstatniegoAdresataWPliku=daneJednegoAdresataOddzielonePionowymiKreskami;daneOstatniegoAdresataWPliku=daneJednegoAdresataOddzielonePionowymiKreskami;
         }
-        daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
     }
     else
         cout << "Nie udalo sie otworzyc pliku i wczytac danych." << endl;
 
     plikTekstowyAdresaci.close();
+
+    if(daneOstatniegoAdresataWPliku!="")
+    {
+        idOstatniegoAdresata=pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstatniegoAdresataWPliku);
+    }
     return adresaci;
+}
+
+string PlikZAdresatami::pobierzNazwePliku()
+{
+    return nazwaPlikuZAdresatami;
 }
 
 Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami)
@@ -153,3 +164,7 @@ string PlikZAdresatami::pobierzLiczbe(string tekst, int pozycjaZnaku)
     return liczba;
 }
 
+int PlikZAdresatami::pobierzIdOstatniegoAdresata()
+{
+    return idOstatniegoAdresata;
+}

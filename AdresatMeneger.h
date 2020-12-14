@@ -15,8 +15,7 @@ using namespace std;
 class AdresatMeneger
 {
     vector <Adresat> adresaci;
-    int idZalogowanegoUzytkownika;
-    int idOstatniegoAdresata;
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     int idUsunietegoAdresata;
     PlikZAdresatami plikZAdresatami;
 
@@ -24,17 +23,18 @@ class AdresatMeneger
     void wyswietlDaneAdresata(Adresat);
 
 public:
-    AdresatMeneger(string nazwaPlikuZAdresatami)
-    : plikZAdresatami(nazwaPlikuZAdresatami)
+    AdresatMeneger(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
+    : plikZAdresatami(nazwaPlikuZAdresatami),
+    ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
     {
-        idOstatniegoAdresata=0;
+        adresaci=plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+        fstream plikTekstowy;
+        plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::out|ios::app);
+        plikTekstowy.close();
     };
 
     void dodajAdresata();
-    void ustawIdZalogowanegoUzytkownika(int);
     void wyswietlWszystkichAdresatow();
-    void wczytajAdresatowZPliku(void);
-    int pobierzIdOstatniegoAdresata(void);
 };
 
 #endif

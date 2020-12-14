@@ -15,17 +15,12 @@ void AdresatMeneger::dodajAdresata()
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
 }
 
-void AdresatMeneger::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
-{
-    idZalogowanegoUzytkownika=noweIdZalogowanegoUzytkownika;
-}
-
 Adresat AdresatMeneger::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    adresat.ustawId(++idOstatniegoAdresata);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawId( plikZAdresatami.pobierzIdOstatniegoAdresata() + 1 );
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
@@ -77,16 +72,3 @@ void AdresatMeneger::wyswietlDaneAdresata(Adresat adresat)
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
-void AdresatMeneger::wczytajAdresatowZPliku(void)
-{
-    adresaci=plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-    idOstatniegoAdresata=pobierzIdOstatniegoAdresata()+1;
-
-}
-
-int AdresatMeneger::pobierzIdOstatniegoAdresata(void)
-{
-    vector <Adresat> :: iterator itr = adresaci.end();
-
-    return (itr -> pobierzId());
-}
