@@ -22,6 +22,11 @@ class PlikZAdresatami
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string);
     string pobierzNazwePliku();
+    int wrocNumerLiniiSzukanegoAdresata(int);
+    void usunPlik(string);
+    void zmienNazwePliku(string, string);
+    int zwrocNumerLiniiSzukanegoAdresata(int);
+    void usunWybranaLinieWPliku(int);
 
 public:
     PlikZAdresatami(string NAZWAPLIKUZADRESATAMI)
@@ -33,6 +38,8 @@ public:
     void zapiszWszystkichAdresatowDoPliku(vector <Adresat> &adresaci);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     int pobierzIdOstatniegoAdresata();
+    int usunAdresata(vector <Adresat> &adresaci);
+    int podajIdWybranegoAdresata();
 
 };
 

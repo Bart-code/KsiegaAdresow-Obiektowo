@@ -36,6 +36,7 @@ public:
     bool czyZalogowano();
     void dodajAdresata();
     void wypiszWszystkichAdresatowZalogowanegoUzytkownika();
+    void usunAdresata();
 };
 
 #endif

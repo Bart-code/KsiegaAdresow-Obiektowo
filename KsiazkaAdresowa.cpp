@@ -87,3 +87,8 @@ void KsiazkaAdresowa::wypiszWszystkichAdresatowZalogowanegoUzytkownika()
 {
     adresatMeneger->wyswietlWszystkichAdresatow();
 }
+
+void KsiazkaAdresowa::usunAdresata()
+{
+    adresatMeneger->usunAdresata();
+}

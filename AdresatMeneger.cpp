@@ -72,3 +72,7 @@ void AdresatMeneger::wyswietlDaneAdresata(Adresat adresat)
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
+void AdresatMeneger::usunAdresata()
+{
+    plikZAdresatami.usunAdresata(adresaci);
+}

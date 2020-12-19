@@ -22,6 +22,7 @@ class AdresatMeneger
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat);
 
+
 public:
     AdresatMeneger(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
     : plikZAdresatami(nazwaPlikuZAdresatami),
@@ -35,6 +36,7 @@ public:
 
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void usunAdresata();
 };
 
 #endif

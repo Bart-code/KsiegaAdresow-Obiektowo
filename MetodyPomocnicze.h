@@ -15,6 +15,7 @@ public:
     static string wczytajLinie();
     static char wczytajZnak();
     static int konwersjaStringNaInt(string);
+    static int wczytajLiczbeCalkowita();
 };
 
 #endif // METODYPOMOCNICZE_H

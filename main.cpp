@@ -55,7 +55,7 @@ int main()
                 ksiazkaAdresowa.wypiszWszystkichAdresatowZalogowanegoUzytkownika();
                 break;
             case '5':
-              //  ksiazkaAdresowa.usunAdresata();
+                ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
             //    ksiazkaAdresowa.edytujAdresata();
