@@ -16,6 +16,7 @@ public:
     static char wczytajZnak();
     static int konwersjaStringNaInt(string);
     static int wczytajLiczbeCalkowita();
+    static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string);
 };
 
 #endif // METODYPOMOCNICZE_H

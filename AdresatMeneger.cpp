@@ -76,3 +76,12 @@ void AdresatMeneger::usunAdresata()
 {
     plikZAdresatami.usunAdresata(adresaci);
 }
+
+void AdresatMeneger::edytujAdresata()
+{
+    plikZAdresatami.edytujAdresata(adresaci);
+}
+
+
+
+
