@@ -25,8 +25,9 @@ class PlikZAdresatami
     int wrocNumerLiniiSzukanegoAdresata(int);
     void usunPlik(string);
     void zmienNazwePliku(string, string);
-    int zwrocNumerLiniiSzukanegoAdresata(int);
-    void usunWybranaLinieWPliku(int);
+    //int zwrocNumerLiniiSzukanegoAdresata(int);
+    //void usunWybranaLinieWPliku(int);
+    void usunWybranegoAdresataZPliku(int);
 
 public:
     PlikZAdresatami(string NAZWAPLIKUZADRESATAMI)
