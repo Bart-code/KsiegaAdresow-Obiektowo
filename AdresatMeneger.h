@@ -3,6 +3,7 @@
 
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
+#include "PlikTekstowy.h"
 #include "PlikZAdresatami.h"
 #include <iostream>
 #include <vector>

@@ -8,6 +8,7 @@
 #include <fstream>
 
 #include "Uzytkownik.h"
+#include "PlikTekstowy.h"
 #include "PlikZUzytkownikami.h"
 #include "MetodyPomocnicze.h"
 

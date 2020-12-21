@@ -1,0 +1,30 @@
+#ifndef PLIKTEKSTOWY_H
+#define PLIKTEKSTOWY_H
+
+#include <iostream>
+#include <vector>
+#include <sstream>
+#include <fstream>
+#include "windows.h"
+
+#include "Uzytkownik.h"
+#include "Adresat.h"
+#include "MetodyPomocnicze.h"
+
+using namespace std;
+
+class PlikTekstowy
+{
+    const string NAZWA_PLIKU;
+
+public:
+    PlikTekstowy(string nazwaPliku)
+    : NAZWA_PLIKU(nazwaPliku)
+    {
+    }
+
+    bool czyPlikJestPusty();
+    string pobierzNazwePliku();
+};
+
+#endif
