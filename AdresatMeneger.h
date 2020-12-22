@@ -22,6 +22,7 @@ class AdresatMeneger
 
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat);
+    void wyswietlIloscWyszukanychAdresatow(int);
 
 
 public:
@@ -39,6 +40,8 @@ public:
     void wyswietlWszystkichAdresatow();
     void usunAdresata();
     void edytujAdresata();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 };
 
 #endif

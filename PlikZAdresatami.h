@@ -20,7 +20,6 @@ class PlikZAdresatami : public PlikTekstowy
     string pobierzLiczbe(string , int );
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string);
-    string pobierzNazwePliku();
     int wrocNumerLiniiSzukanegoAdresata(int);
     void usunPlik(string);
     void zmienNazwePliku(string, string);

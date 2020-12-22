@@ -46,10 +46,10 @@ int main()
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-            //    ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-            //    ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wypiszWszystkichAdresatowZalogowanegoUzytkownika();
@@ -61,7 +61,7 @@ int main()
                 ksiazkaAdresowa.edytujAdresata();
                 break;
             case '7':
-            //    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+                ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
             case '8':
                 ksiazkaAdresowa.wylogujUzytkownika();

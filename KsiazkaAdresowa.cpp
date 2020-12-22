@@ -97,3 +97,13 @@ void KsiazkaAdresowa::edytujAdresata()
 {
     adresatMeneger->edytujAdresata();
 }
+
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    adresatMeneger->wyszukajAdresatowPoImieniu();
+}
+
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+    adresatMeneger->wyszukajAdresatowPoNazwisku();
+}

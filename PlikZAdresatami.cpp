@@ -78,11 +78,6 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
     return adresaci;
 }
 
-string PlikZAdresatami::pobierzNazwePliku()
-{
-    return pobierzNazwePliku();
-}
-
 Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami)
 {
 
