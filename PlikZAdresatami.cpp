@@ -18,7 +18,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
         }
         else
         {
-            plikTekstowy <<  liniaZDanymiAdresata << endl;
+            plikTekstowy <<  endl << liniaZDanymiAdresata;
         }
     }
     else
